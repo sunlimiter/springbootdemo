@@ -1,13 +1,14 @@
 package com.tywho.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by lty on 2017/12/28/0028.
  */
 @Entity
-public class SysRole {
+public class SysRole implements Serializable {
     @Id
     @GeneratedValue
     private Integer id; // 编号
