@@ -47,9 +47,11 @@ public class HomeController {
         }
 
         map.put("msg", msg);
-        if(currentUser.isAuthenticated()){
-            return "/index";
-        }else{
+        System.out.println(currentUser.isAuthenticated());
+        //验证是否登录成功
+        if (currentUser.isAuthenticated()) {
+            return "redirect:/index";
+        } else {
             return "/login";
         }
     }
